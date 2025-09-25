@@ -1,18 +1,15 @@
 import React from 'react';
 
-// You'll need a different, more square-like photo for this section
 import aboutImage from '../assets/profile-about.png'; 
 
 const About = () => {
   return (
     <section 
       id="about" 
-      // Here we apply the background pattern
       className="font-poppins min-h-screen w-full bg-brand-bg-dark bg-dotted-pattern bg-dotted-size flex items-center py-24 px-10 lg:px-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-16 items-center">
         
-        {/* Left Column: Text Content */}
         <div className="md:col-span-3">
           <h2 className="text-5xl mb-6 text-white tracking-wide">
             About Me:
@@ -22,9 +19,7 @@ const About = () => {
           </p>
         </div>
         
-        {/* Right Column: Image */}
         <div className="md:col-span-2 flex justify-center">
-            {/* === UNCOMMENT THIS IMG TAG ONCE YOU HAVE YOUR 'ABOUT' IMAGE === */}
             
             <img 
                 src={aboutImage} 

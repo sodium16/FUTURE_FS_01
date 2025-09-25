@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Make sure your image files are in the 'src/assets' folder
 import pythonIcon from '../assets/download 1.png';
 import cIcon from '../assets/download 2.png';
 import cppIcon from '../assets/download 3.png';
@@ -28,7 +27,6 @@ const Skills = () => {
       className="font-poppins min-h-screen w-full bg-brand-bg-light flex flex-col items-center justify-center py-24 px-10 lg:px-20"
     >
       <div className="w-full max-w-4xl">
-        {/* CHANGE 1: Removed 'text-center' from the parent and added 'text-left' to the title. */}
         <h2 className="text-5xl mb-16 text-brand-bg-dark tracking-wide text-left">
           My Skills:
         </h2>
@@ -39,14 +37,12 @@ const Skills = () => {
               
               <div className="h-33 w-33 mb-4 flex items-center justify-center">
                 {skill.icons ? (
-                  // CHANGE 2: Replaced the complex absolute positioning with a simple and robust CSS grid.
                   <div className="grid grid-cols-2 gap-2 w-full h-full">
                     {skill.icons.map((iconSrc, index) => (
                       <img key={index} src={iconSrc} alt="" className="w-full h-full object-contain" />
                     ))}
                   </div>
                 ) : (
-                  // This part for single icons remains the same.
                   <img src={skill.icon} alt={skill.name} className="max-w-full max-h-full object-contain" />
                 )}
               </div>

@@ -7,7 +7,6 @@ import profileImage from '../assets/vishwas-profile.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
-  // Desktop positions
   { title: 'DIGITAL AND DESIGN CORE', company: 'nodedotai', desktopPosition: 'absolute top-[30%] left-[5%] md:left-[15%] text-left' },
   { title: 'MARKETING TEAM MEMBER', company: 'TEDxBITBangalore', desktopPosition: 'absolute top-[30%] right-[5%] md:right-[15%] text-right' },
   { title: 'SOPHOMORE IN ENGINEERING', company: 'Bangalore Institute of Technology', desktopPosition: 'absolute bottom-[10%] left-[5%] md:left-[15%] text-left' },
@@ -19,9 +18,7 @@ const Landing = () => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Use matchMedia for responsive animations
       ScrollTrigger.matchMedia({
-        // Desktop animation (screens wider than 768px)
         "(min-width: 768px)": function() {
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -37,9 +34,7 @@ const Landing = () => {
             .to('.landing-image-container', { y: -50, scale: 1.05 }, 0)
             .fromTo('.experience-card', { opacity: 0, y: 50, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, stagger: 0.2 }, 0);
         },
-        // Mobile animation (screens smaller than 768px)
         "(max-width: 767px)": function() {
-          // Creates a parallax "sliding" effect on mobile scroll
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: componentRef.current,
@@ -49,12 +44,9 @@ const Landing = () => {
             }
           });
 
-          // Title slides up faster
           tl.to('.landing-title', { y: -80, opacity: 0.2 }, 0);
-          // Image slides up slower for a parallax effect
           tl.to('.landing-image-container', { y: -40 }, 0);
           
-          // Cards still slide and fade in when they enter the viewport
           gsap.from('.experience-card', {
             opacity: 0,
             y: 30,
@@ -67,7 +59,6 @@ const Landing = () => {
         }
       });
 
-      // This on-load animation runs on all screen sizes
       gsap.fromTo('.landing-image-container', { y: 150, opacity: 0 }, {
         y: 0, opacity: 1, delay: 0.8, duration: 0.15, ease: 'power2.out',
       });
@@ -78,7 +69,6 @@ const Landing = () => {
   return (
     <section ref={componentRef} id="landing" className="min-h-screen w-full bg-brand-bg-light relative overflow-hidden pt-24 md:pt-0">
       
-      {/* Container for Desktop Layout */}
       <div className="hidden md:block w-full h-full">
         <div className="w-full h-full flex items-center justify-center">
           <div className="landing-title text-center z-10">
@@ -100,7 +90,6 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Container for Mobile Layout */}
       <div className="md:hidden flex flex-col items-center px-4">
         <div className="landing-title text-center">
           <h1 className="font-anton text-[24vw] leading-tight text-brand-text uppercase">

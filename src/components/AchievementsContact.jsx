@@ -1,10 +1,8 @@
 import React from 'react';
 
-// You will need to add your certificate image to the `src/assets` folder
 import certificateImg from '../assets/image 3.png';
 
 const AchievementsContact = () => {
-  // Data for achievements and links to make them easy to edit
   const achievements = [
     '3rd Place - Spark Tank by Google Developer Groups, BIT, for the RFID-based Crowd Management Project.',
     'Advanced to Round 2 - SAP Hackfest 2025 with the LinkSuraksha Chrome Extension.',
@@ -13,26 +11,22 @@ const AchievementsContact = () => {
   ];
   
   const links = {
-    resume: '/public/Resume.pdf', // TODO: Add your resume file link
-    linkedin: 'https://www.linkedin.com/in/vishwasnaveen', // TODO: Add your LinkedIn profile URL
-    github: 'https://github.com/sodium16', // TODO: Add your GitHub profile URL
+    resume: '/public/Resume.pdf', 
+    linkedin: 'https://www.linkedin.com/in/vishwasnaveen', 
+    github: 'https://github.com/sodium16', 
   };
 
   return (
     <section id="achievements" className="w-full">
-      {/* Achievements Part (Light Background) */}
       <div className="w-full bg-brand-bg-light py-24 px-10 lg:px-20 text-brand-bg-dark">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Left Column: Text */}
           <div>
             <h2 className="text-5xl font-bold mb-8 tracking-wide">Achievements:</h2>
             <ul className="space-y-4 list-disc list-inside text-lg">
               {achievements.map((item, index) => <li key={index}>{item}</li>)}
             </ul>
           </div>
-          {/* Right Column: Certificate Image */}
           <div className="flex justify-center items-center">
-            {/* === UNCOMMENT THIS IMG TAG ONCE YOU HAVE YOUR CERTIFICATE IMAGE === */}
             
             <img 
               src={certificateImg} 
@@ -44,7 +38,6 @@ const AchievementsContact = () => {
         </div>
       </div>
       
-      {/* Contact Part (Dark Background) */}
       <div id="contact" className="w-full bg-brand-bg-dark py-24 px-10 lg:px-20 text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 tracking-wide">Let's get in touch:</h2>

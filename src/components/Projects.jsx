@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Import BOTH project images
 import linksurakshaImg from '../assets/482012359-eeaa3617-6aac-4b18-a3cb-724e999acb3a 1.png';
 import image2 from '../assets/image 2.png'; 
 
@@ -13,8 +12,8 @@ const projectData = [
       'Extension Framework: Chrome Extensions API (Manifest V3)',
       'APIs/Tools: URL Unshortening APIs (for real-time link analysis)',
     ],
-    imageTop: linksurakshaImg, // The image on top
-    imageBottom: image2,      // The image underneath
+    imageTop: linksurakshaImg, 
+    imageBottom: image2,      
   },
 ];
 
@@ -35,7 +34,6 @@ const Projects = () => {
             className="bg-[#7f7679] p-8 rounded-2xl border border-gray-500/30 shadow-xl backdrop-blur-sm"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Column: Text Details */}
               <div>
                 <h3 className="text-3xl font-bold text-white mb-4">{project.title}:</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
@@ -47,16 +45,13 @@ const Projects = () => {
                 </ul>
               </div>
               
-              {/* Right Column: Layered Images */}
               <div className="flex items-center justify-center">
                 <div className="w-full max-w-sm flex flex-col gap-4 relative">
-                  {/* Top Image */}
                   <img 
                     src={project.imageTop}
                     alt=""
                     className="rounded-lg shadow-2xl w-full"
                   />
-                  {/* Bottom image */}
                   <img 
                     src={project.imageBottom} 
                     alt={project.title}
