@@ -10,7 +10,7 @@ const About = () => {
       // Here we apply the background pattern
       className="font-poppins min-h-screen w-full bg-brand-bg-dark bg-dotted-pattern bg-dotted-size flex items-center py-24 px-10 lg:px-20"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-16 items-center">
         
         {/* Left Column: Text Content */}
         <div className="md:col-span-3">
