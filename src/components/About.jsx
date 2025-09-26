@@ -15,7 +15,7 @@ const About = () => {
             About Me:
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            I am a second year AI & ML engineering student at Bangalore Institute of Technology. I am always in a constant state of continuous hunger for learning something new and all the time. Aside from coding, I am a professional speedcuber with a sub-9 record of 8.100s. Other interests of mine include but isn't limited to drawing, playing the guitar, volleyball and many more. I enjoy solving challenging problems, experimenting with creative ideas, and collaborating on projects that make an impact. I also love reading about AI trends, tech innovations, and personal growth.
+            I am a second year AI & ML engineering student at Bangalore Institute of Technology. I am always in a constant state of continuous hunger for learning something new and all the time. Aside from coding, I am a professional speedcuber with an ao5 pb of 18.100s. Other interests of mine include but isn't limited to drawing, playing the guitar, volleyball and many more. I am the social media manager of Parallax Productions and also have acted in the same. I have a heart out for video editing and color grading. I enjoy solving challenging problems, experimenting with creative ideas, and collaborating on projects that make an impact. I also love reading about AI trends, tech innovations, and personal growth.
           </p>
         </div>
         
