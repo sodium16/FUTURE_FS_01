@@ -11,7 +11,7 @@ const AchievementsContact = () => {
   ];
   
   const links = {
-    resume: '../../public/Resume.pdf', 
+    resume: '/Resume.pdf', 
     linkedin: 'https://www.linkedin.com/in/vishwasnaveen', 
     github: 'https://github.com/sodium16', 
   };
